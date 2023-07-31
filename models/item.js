@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-// Ensure the Category model is processed by Mongoose
-require('./category');
-
 const itemSchema = require('./itemSchema');
 
-module.exports = mongoose.model('Item', itemSchema);
+// Define the Item model using the itemSchema.
+const Item = mongoose.model('Item', itemSchema);
+
+module.exports = Item;
